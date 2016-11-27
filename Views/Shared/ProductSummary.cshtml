@@ -1,0 +1,10 @@
+﻿@model MatStore.Domain.Entities.Product
+
+<div class="container" style="border: 2px solid lightblue; margin-top: 5px;  background-color: aliceblue;">
+    <h3>
+        <strong>@Model.Name</strong>
+        <span class="pull-right">@Model.Price.ToString("c")</span>
+    </h3>
+    <span class="lead">@Model.Description</span>
+    <img src="@Url.Content(Model.Image)" height="95" style="padding-left: 45px; padding-bottom: 25px;"/>
+</div>

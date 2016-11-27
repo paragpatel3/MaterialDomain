@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="h1" style="text-align: center">
+        <a class ="h1" href="Account/Login" style="text-align: center">Material Domain</a>
+    </div>
+    <div class="panel" style="background-image: url(../../images/construction.jpg); background-repeat: no-repeat; background-size: auto; background-color: rgba(0,0,0,0.2);">
+        <div class="row" style="margin-left: 0px; margin-right: 0px;">
+            <div class="col-sm-4"></div>
+            <div id="categories" class="col-sm-4 panel-body text-center" style="margin-top: 10px; margin-bottom: 10px;">
+                @Html.Action("Menu", "Category")
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+        <div class="panel-body" style="margin-top: 10px; margin-bottom: 10px;" >
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

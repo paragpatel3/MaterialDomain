@@ -1,0 +1,18 @@
+﻿@model MatStore.WebUI.Models.ProductsListViewModel
+
+@{
+    ViewBag.Title = "Products";
+}
+
+@foreach (var p in Model.Products)
+{
+    @Html.Partial("ProductSummary", p)
+}
+
+<div class="panel-body">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4 text-center" id="pagers">
+        @Html.linker(Model.PagingInfo, x => Url.Action("List", new { page = x, category = Model.CurrentCategory }))
+    </div>
+    <div class="col-sm-4"></div>
+</div>
